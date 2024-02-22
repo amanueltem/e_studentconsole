@@ -130,6 +130,22 @@ public class DisplayDetail {
                     System.out.println("No Grading objects found in the file.");
                 } 
             }
+
+            public static boolean searchStudent(List<Grading> gradingList,String id){
+                if (gradingList != null) {
+
+                    for (Grading grading : gradingList) {
+                        //System.out.println(grading.getStudent().getStudentId());
+                       if((grading.getStudent().getStudentId()).equals(id)){
+                        return false;
+                       }
+                }
+                return true;
+            }
+                else {
+                    return true;
+                } 
+            }
             public static void displayGradeCourse(AnyCourse course){
                 System.out.printf("%-10s %-50s %-10.2f %-10s %-15d %-10.2f%n",
                         course.getCourseCode(),
